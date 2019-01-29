@@ -46,6 +46,6 @@ which is based on Domain Name to finish the Load Balancer feature.
 ```
 At last, you can try to run the following command to get the client Real IP Address(HTTP_X_FORWARDED_FOR):
 ```
-  curl -v -k https://service-nginx-default.apps.openshift.example.com/test.php
+  curl -k https://service-nginx-default.apps.openshift.example.com/test.php
 ```
 
