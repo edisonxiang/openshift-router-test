@@ -4,6 +4,11 @@ Test Router and Routes which refer to the backend https nginx application in the
 
 In this example, we try to get the client X-Forward-For IP Address in the https ngixin application.
 
+The workflow is like below:
+```
+client => Elastic Load Balancer(ELB) => OpenShift Router(HAProxy) => OpenShift Route(Reencrypt) => Nginx(PHP)
+```
+
 Before you start to test this example, please install the OpenShift Origin environment whose version is greater than 3.9.
 
 * Add privilege for serviceaccount
