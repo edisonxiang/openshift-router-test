@@ -5,3 +5,7 @@ Currently the following application is tested for Router and Routes:
 
 * [https-nginx](https://github.com/edisonxiang/openshift-router-test/https-nginx)
 
+## License
+
+openshift-router-test is under the Apache 2.0 license. See the [LICENSE](LICENSE) file for details.
+
