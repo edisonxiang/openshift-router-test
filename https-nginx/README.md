@@ -35,7 +35,7 @@ If you are using Elastic Load Balancer(ELB) on the Cloud, please finish the foll
 
 DNS Zone and Record Set are necessary Since we are using the OpenShift Router
 which is based on Domain Name to finish the Load Balancer feature.
-* Create DNS Private Zone
+* Create DNS Private Zone related to the VPC of OpenShift Cluster
 ```
     Name: openshift.example.com
 ```
