@@ -6,7 +6,7 @@ In this example, we try to get the client X-Forward-For IP Address in the https 
 
 The workflow is like below:
 ```
-client => Elastic Load Balancer(ELB) => OpenShift Router(HAProxy) => OpenShift Route(Reencrypt) => Nginx(PHP)
+  client => ELB => OpenShift Router(HAProxy) => OpenShift Route(Reencrypt) => Nginx(PHP)
 ```
 
 Before you start to test this example, please install the OpenShift Origin environment whose version is greater than 3.9.
@@ -36,15 +36,14 @@ If you are using Elastic Load Balancer(ELB) on the Cloud, please finish the foll
 DNS Zone and Record Set are necessary Since we are using the OpenShift Router
 which is based on Domain Name to finish the Load Balancer feature.
 * Create DNS Private Zone
-
-  Name: openshift.example.com
-  
+```
+    Name: openshift.example.com
+```
 * Create DNS Record Set
-
-  Name: service-nginx-default.apps.openshift.example.com
-  
-  IP Address: Elastic Load Balancer(ELB) IP Address
-
+```
+    Name: service-nginx-default.apps.openshift.example.com
+    IP Address: Elastic Load Balancer(ELB) IP Address
+```
 At last, you can try to run the following command to test it:
 ```
   curl -v -k https://service-nginx-default.apps.openshift.example.com/test.php
