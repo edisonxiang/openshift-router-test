@@ -2,7 +2,7 @@
 
 Test Router and Routes which refer to the backend https nginx application in the OpenShift Origin.
 
-In this example, we try to get the client X-Forward-For IP Address in the https ngixin application.
+In this example, we try to get the client Real IP Address(HTTP_X_FORWARDED_FOR) in the https ngixin application.
 
 The workflow is like below:
 ```
@@ -44,7 +44,7 @@ which is based on Domain Name to finish the Load Balancer feature.
     Name: service-nginx-default.apps.openshift.example.com
     IP Address: Elastic Load Balancer(ELB) IP Address
 ```
-At last, you can try to run the following command to test it:
+At last, you can try to run the following command to get the client Real IP Address(HTTP_X_FORWARDED_FOR):
 ```
   curl -v -k https://service-nginx-default.apps.openshift.example.com/test.php
 ```
