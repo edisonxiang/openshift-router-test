@@ -49,3 +49,4 @@ At last, you can try to run the following command to get the client Real IP Addr
   curl -k https://service-nginx-default.apps.openshift.example.com/test.php
 ```
 
+Reference Link: https://github.com/kubernetes/examples/tree/master/staging/https-nginx
